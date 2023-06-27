@@ -10,7 +10,7 @@ server.use(expressObj.json())
 server.use(require("./routes"))
 
 server.use("*", (req, res) => {
-    res.status(404).send("Not Found")
+    res.status(404).send(req.baseUrl)
 })
 
 server.use((err, req, res, next) => {

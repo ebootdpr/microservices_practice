@@ -1,5 +1,7 @@
-const server = require("./server")
-const PORT = 3001
-server.listen(PORT, ()=>{
-    console.log("server planets listening at: ", PORT);
-})
+const server = require("./server");
+
+const PORT = 3003;
+
+server.listen(PORT,()=>{
+    console.log("server listening for planets on port: ", PORT);
+});

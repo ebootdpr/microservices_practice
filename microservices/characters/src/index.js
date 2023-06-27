@@ -1,7 +1,7 @@
 const server = require("./server");
 
-const PORT = 3002;
+const PORT = 3001;
 
 server.listen(PORT,()=>{
-    console.log("server listening on port: ", PORT);
+    console.log("server listening for characters on port: ", PORT);
 });
