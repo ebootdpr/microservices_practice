@@ -1,7 +1,10 @@
-const characters = require("./characters.json");
-
 module.exports = {
-    list: async () => {
-        return characters;
-    },
+  list: async () => {
+    const result = await fetch("http://database:3004/characters").then(resp => {
+      return resp.json()
+    }).then(decoded => {
+      return decoded
+    })
+    return result;
+  },
 }

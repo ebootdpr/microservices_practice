@@ -14,7 +14,7 @@ server.use("*", (req, res) => {
 })
 
 server.use((err, req, res, next) => {
-    res.status(err.statusCode).send({
+    res.status(err.statusCode||503).send({
         error: true,
         message: err.message,
     })
